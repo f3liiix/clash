@@ -194,6 +194,7 @@ rule-providers:
   Google: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml, path: ./ruleset/Google.yaml}
   Reddit: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml, path: ./ruleset/Reddit.yaml}
   Steam: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml, path: ./ruleset/Steam.yaml}
+  Direct: {<<: *a6, url: https://hoofei.com/clash/rules/Direct.yaml, path: ./ruleset/Direct.yaml}
   
 rules:
 # 分流
@@ -212,6 +213,7 @@ rules:
   - RULE-SET,Google,美国
   - RULE-SET,Reddit,美国
   - RULE-SET,Steam,DIRECT
+  - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare-dns.com,默认
