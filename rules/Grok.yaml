@@ -1,8 +1,0 @@
-# NAME: Grok
-# AUTHOR: hoofei
-# UPDATED: 2025-03-18 07:58:30
-# DOMAIN-SUFFIX: 2
-# TOTAL: 2
-payload:
-  - DOMAIN-SUFFIX,grok.com
-  - DOMAIN-SUFFIX,x.ai
