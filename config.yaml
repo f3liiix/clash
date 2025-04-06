@@ -107,6 +107,9 @@ dns:
     "geosite:cn,private,apple":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
+    "geosite:geolocation-!cn":
+      - https://dns.cloudflare.com/dns-query
+      - https://dns.google/dns-query
     "geosite:category-ads-all": rcode://success
 
   # 当配置 fallback 时，会查询 nameserver 中返回的 IP 是否为 CN，非必要配置
