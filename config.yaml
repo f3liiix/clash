@@ -67,6 +67,7 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+  strict-route: true
 
 # DNS 配置
 dns:
