@@ -1,0 +1,7 @@
+# NAME: DIRECT
+# AUTHOR: hoofei
+payload:
+  - IP-CIDR,47.76.82.0/24,no-resolve
+  - IP-CIDR,47.76.238.0/24,no-resolve
+  - IP-CIDR,45.192.110.0/24,no-resolve
+  - IP-CIDR,54.178.92.0/24,no-resolve
