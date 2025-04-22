@@ -145,6 +145,7 @@ sniffer:
 # 策略组引用
 Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}, override: {skip-cert-verify: true, udp: true}}
 manual: &a2 {type: select, use: [Subscribe]}
+classical: &a3 {type: http, behavior: classical, interval: 28800}
 
 proxies:
   - name: "直连"
@@ -160,9 +161,25 @@ proxy-providers:
 proxy-groups:
   # 默认
   - {name: 默认, <<: *a2, icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/Manual.png }
+  # 分流
+  - {name: AI, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/AI.png }
+  - {name: TikTok, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/TikTok.png }
+  - {name: Netflix, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/Netflix.png }
+
+rule-providers:
+  AI: {<<: *a3, url: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/rules/AI.yaml, path: ./ruleset/AI.yaml}
+  TikTok: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml, path: ./ruleset/TikTok.yaml}
+  Netflix: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_Classical.yaml, path: ./ruleset/Netflix.yaml}
+  WeChat: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  Steam: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml, path: ./ruleset/Steam.yaml}
   
 rules:
 # 分流
+  - RULE-SET,AI,AI
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Netflix,Netflix,no-resolve
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,Steam,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare-dns.com,默认
