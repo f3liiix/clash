@@ -163,8 +163,6 @@ proxy-groups:
   
 rules:
 # 分流
-  - RULE-SET,WeChat,DIRECT
-  - RULE-SET,Steam,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare-dns.com,默认
