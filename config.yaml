@@ -57,7 +57,8 @@ tun:
   enable: true
   stack: mixed
   dns-hijack:
-    - "tcp://0.0.0.0:53"
+    - "any:53"
+    - "tcp://any:53"
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
