@@ -72,6 +72,7 @@ dns:
   ipv6: false # false 将返回 AAAA 的空结果
   respect-rules: true # 遵循规则
   enhanced-mode: fake-ip # 使用fake-ip模式
+  behavior: strict
   fake-ip-range: 198.18.0.1/16 # Fake IP 池设置
   fake-ip-filter-mode: blacklist
 
@@ -87,7 +88,7 @@ dns:
     - '*.arpa'
     - time.*.com
     - ntp.*.com
-    - +.market.xiaomi.com
+    - +.xiaomi.com
     - localhost.ptlogin2.qq.com
     - geosite:private
     - geosite:cn
@@ -138,8 +139,7 @@ sniffer:
     - "+.push.apple.com"
 
 # 策略组引用
-Pr: &a3 {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,家宽,直连]}
-Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}, override: {skip-cert-verify: true, udp: true}}
+Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}, lazy: true, override: {skip-cert-verify: true, udp: true}}
 auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 300, use: [Subscribe]}
 manual: &a2 {type: select, use: [Subscribe]}
 classical: &a6 {type: http, behavior: classical, interval: 28800}
@@ -192,10 +192,11 @@ rule-providers:
   
 rules:
 # 分流
+  - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,AI,AI
   - RULE-SET,Crypto,Crypto
   - RULE-SET,TikTok,TikTok
-  - RULE-SET,Netflix,Netflix,no-resolve
+  - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney+,Disney+
   - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,WhatsApp,WhatsApp,no-resolve
@@ -213,5 +214,4 @@ rules:
   - DOMAIN,1.1.1.1,默认
   - DOMAIN,8.8.8.8,默认
   - DOMAIN,9.9.9.9,默认
-  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,默认

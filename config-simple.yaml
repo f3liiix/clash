@@ -77,6 +77,7 @@ dns:
   ipv6: false # false 将返回 AAAA 的空结果
   respect-rules: true # 遵循规则
   enhanced-mode: fake-ip # 使用fake-ip模式
+  behavior: strict
   fake-ip-range: 198.18.0.1/16 # Fake IP 池设置
   fake-ip-filter-mode: blacklist
 
@@ -175,9 +176,10 @@ rule-providers:
   
 rules:
 # 分流
+  - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,AI,AI
   - RULE-SET,TikTok,TikTok
-  - RULE-SET,Netflix,Netflix,no-resolve
+  - RULE-SET,Netflix,Netflix
   - RULE-SET,WeChat,DIRECT
   - RULE-SET,Steam,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
@@ -187,5 +189,4 @@ rules:
   - DOMAIN,1.1.1.1,默认
   - DOMAIN,8.8.8.8,默认
   - DOMAIN,9.9.9.9,默认
-  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,默认
