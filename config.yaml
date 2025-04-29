@@ -26,11 +26,6 @@ external-controller-pipe: \\.\pipe\mihomo
 external-controller-tls: 0.0.0.0:9443
 external-doh-server: /dns-query
 
-# 配置 WEB UI 目录，使用 http://{{external-controller}}/ui 访问
-# external-ui: /path/to/ui/folder/
-# external-ui-name: xd
-# external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-
 # 缓存
 profile:
   store-selected: true # 存储 select 选择记录
@@ -187,7 +182,7 @@ rule-providers:
   Disney+: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml, path: ./ruleset/Disney.yaml}
   Telegram: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml, path: ./ruleset/Telegram.yaml}
   WhatsApp: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Whatsapp/Whatsapp.yaml, path: ./ruleset/WhatsApp.yaml}
-  WordPress: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Wordpress/Wordpress.yaml, path: ./ruleset/WordPress.yaml}
+  WordPress: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Wordpress/Wordpress.yaml, path: ./ruleset/WordPress.yaml}
   WeChat: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml, path: ./ruleset/WeChat.yaml}
   Google: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml, path: ./ruleset/Google.yaml}
   Reddit: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml, path: ./ruleset/Reddit.yaml}
