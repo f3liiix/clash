@@ -7,3 +7,4 @@ payload:
   - IP-CIDR,46.232.61.0/24,no-resolve
   - IP-CIDR,54.178.92.0/24,no-resolve
   - DOMAIN-SUFFIX,right.com.cn
+  - DOMAIN-SUFFIX,sub.hoofei.com
