@@ -97,14 +97,14 @@ dns:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     "geosite:geolocation-!cn":
-      - 1.1.1.1
-      - 8.8.8.8
+      - https://dns.cloudflare.com/dns-query
+      - https://dns.google/dns-query
 
   # 当配置 fallback 时，会查询 nameserver 中返回的 IP 是否为 CN，非必要配置
   # 当不是 CN，则使用 fallback 中的 DNS 查询结果
   fallback:
-    - 1.1.1.1
-    - 8.8.8.8
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
   fallback-filter:
     geoip: true # 配置是否使用 geoip
     geoip-code: CN # 当 nameserver 域名的 IP 查询 geoip 库为 CN 时，不使用 fallback 中的 DNS 查询结果
@@ -137,11 +137,6 @@ Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://
 auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 300, use: [Subscribe]}
 manual: &a2 {type: select, use: [Subscribe]}
 classical: &a6 {type: http, behavior: classical, interval: 28800}
-
-proxies:
-  - name: "直连"
-    type: direct
-    udp: true
 
 proxy-providers:
   Subscribe:
