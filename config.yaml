@@ -147,7 +147,10 @@ proxy-providers:
   Subscribe:
     <<: *a1
     url: $suburl
-    path: ./proxy_providers/SelfHost.yaml
+    path: ./SelfHost.yaml
+    override:
+      skip-cert-verify: true
+      udp: true
 
 proxy-groups:
   # 默认
