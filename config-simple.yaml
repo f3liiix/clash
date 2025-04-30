@@ -170,7 +170,6 @@ rule-providers:
   
 rules:
 # 分流
-  - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,AI,AI
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Netflix,Netflix
@@ -183,4 +182,5 @@ rules:
   - DOMAIN,1.1.1.1,默认
   - DOMAIN,8.8.8.8,默认
   - DOMAIN,9.9.9.9,默认
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,默认
