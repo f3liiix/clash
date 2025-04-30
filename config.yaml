@@ -146,7 +146,7 @@ classical: &a6 {type: http, behavior: classical, interval: 28800}
 
 proxies:
   - name: "直连"
-    type: direct
+    type: DIRECT
     udp: true
 
 proxy-providers:
