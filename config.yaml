@@ -111,8 +111,8 @@ dns:
   # 当配置 fallback 时，会查询 nameserver 中返回的 IP 是否为 CN，非必要配置
   # 当不是 CN，则使用 fallback 中的 DNS 查询结果
   fallback:
-    - https://cloudflare-dns.com/dns-query # Cloudflare DNS
-    - https://dns.google/dns-query # Google DNS
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
   fallback-filter:
     geoip: true # 配置是否使用 geoip
     geoip-code: CN # 当 nameserver 域名的 IP 查询 geoip 库为 CN 时，不使用 fallback 中的 DNS 查询结果
@@ -120,8 +120,8 @@ dns:
       - 240.0.0.0/4
   
   proxy-server-nameserver:
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 
 # 嗅探配置
 sniffer:

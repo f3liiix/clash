@@ -93,7 +93,7 @@ dns:
     - '*.arpa'
     - time.*.com
     - ntp.*.com
-    - +.market.xiaomi.com
+    - +.xiaomi.com
     - localhost.ptlogin2.qq.com
     - geosite:private
     - geosite:cn
