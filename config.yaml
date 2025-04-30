@@ -136,6 +136,11 @@ auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204,
 manual: &a2 {type: select, use: [Subscribe]}
 classical: &a6 {type: http, behavior: classical, interval: 28800}
 
+proxies:
+  - name: "直连"
+    type: direct
+    udp: true
+
 proxy-providers:
   Subscribe:
     <<: *a1
@@ -179,6 +184,7 @@ rule-providers:
   
 rules:
 # 分流
+  - RULE-SET,Direct,DIRECT
   - RULE-SET,AI,AI
   - RULE-SET,Crypto,Crypto
   - RULE-SET,TikTok,TikTok
@@ -192,7 +198,6 @@ rules:
   - RULE-SET,Reddit,美国
   - RULE-SET,WeChat,DIRECT
   - RULE-SET,Steam,DIRECT
-  - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare-dns.com,默认
