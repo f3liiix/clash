@@ -110,6 +110,8 @@ dns:
     geoip-code: CN # 当 nameserver 域名的 IP 查询 geoip 库为 CN 时，不使用 fallback 中的 DNS 查询结果
     ipcidr:
       - 240.0.0.0/4
+    domain:
+      - "+.hoofei.com"
   
   proxy-server-nameserver:
     - https://doh.pub/dns-query
