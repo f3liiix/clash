@@ -19,11 +19,6 @@ keep-alive-interval: 1800 #TCP Keep Alive 包的间隔，单位为秒
 keep-alive-idle: 60 # TCP Keep Alive 的最大空闲时间
 disable-keep-alive: false # 禁用 TCP Keep Alive
 
-# 配置 WEB UI 目录，使用 http://{{external-controller}}/ui 访问
-# external-ui: /path/to/ui/folder/
-# external-ui-name: xd
-# external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-
 # 缓存
 profile:
   store-selected: true # 存储 select 选择记录
