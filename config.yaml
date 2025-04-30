@@ -97,8 +97,8 @@ dns:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     "geosite:geolocation-!cn":
-      - https://dns.cloudflare.com/dns-query
-      - https://dns.google/dns-query
+      - 1.1.1.1
+      - 8.8.8.8
 
   # 当配置 fallback 时，会查询 nameserver 中返回的 IP 是否为 CN，非必要配置
   # 当不是 CN，则使用 fallback 中的 DNS 查询结果
