@@ -50,10 +50,10 @@ geo-auto-update: true # 是否自动更新 GEO
 geo-update-interval: 720 # 更新间隔，单位：小时
 # 自定义 GEO 下载地址
 geox-url:
-  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
-  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+  geoip: "https://gitee.com/hoofei/clash/raw/main/data/geoip.dat"
+  geosite: "https://gitee.com/hoofei/clash/raw/main/data/geosite.dat"
+  mmdb: "https://gitee.com/hoofei/clash/raw/main/data/country.mmdb"
+  asn: "https://gitee.com/hoofei/clash/raw/main/data/GeoLite2-ASN.mmdb"
 
 global-ua: clash.meta # 自定义外部资源下载时使用的的 UA
 
@@ -155,18 +155,18 @@ proxy-providers:
 
 proxy-groups:
   # 默认
-  - {name: 默认, <<: *a2, icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/Manual.png }
+  - {name: 默认, <<: *a2, icon: https://gitee.com/hoofei/clash/raw/main/icons/Manual.png }
   # 分流
-  - {name: AI, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/AI.png }
-  - {name: TikTok, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/TikTok.png }
-  - {name: Netflix, type: select, proxies: [默认], icon: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/icons/Netflix.png }
+  - {name: AI, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/AI.png }
+  - {name: TikTok, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/TikTok.png }
+  - {name: Netflix, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/Netflix.png }
 
 rule-providers:
-  AI: {<<: *a3, url: https://raw.githubusercontent.com/f3liiix/clash/refs/heads/main/rules/AI.yaml, path: ./ruleset/AI.yaml}
-  TikTok: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml, path: ./ruleset/TikTok.yaml}
-  Netflix: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_Classical.yaml, path: ./ruleset/Netflix.yaml}
-  WeChat: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml, path: ./ruleset/WeChat.yaml}
-  Steam: {<<: *a3, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml, path: ./ruleset/Steam.yaml}
+  AI: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/AI.yaml, path: ./ruleset/AI.yaml}
+  TikTok: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/TikTok.yaml, path: ./ruleset/TikTok.yaml}
+  Netflix: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/Netflix.yaml, path: ./ruleset/Netflix.yaml}
+  WeChat: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  Steam: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/Steam.yaml, path: ./ruleset/Steam.yaml}
   
 rules:
 # 分流
