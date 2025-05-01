@@ -183,7 +183,7 @@ rules:
   - RULE-SET,Steam,DIRECT
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
-  - DOMAIN-SUFFIX,cloudflare-dns.com,默认
+  - DOMAIN-SUFFIX,cloudflare.com,默认
   - DOMAIN-SUFFIX,dns.google,默认
   - DOMAIN,1.1.1.1,默认
   - DOMAIN,8.8.8.8,默认
