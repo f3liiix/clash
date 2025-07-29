@@ -171,7 +171,7 @@ proxy-groups:
   - {name: 美国, <<: *a4, filter: "美国|美西|美东|洛杉矶|US|us|(?i)States|American", icon: https://gitee.com/hoofei/clash/raw/main/icons/US.png}
   - {name: 家宽, <<: *a2, filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub", icon: https://gitee.com/hoofei/clash/raw/main/icons/ISP.png}
   # 分流
-  - {name: AI, type: select, proxies: [日本], icon: https://gitee.com/hoofei/clash/raw/main/icons/AI.png }
+  - {name: AI, type: select, proxies: [家宽], icon: https://gitee.com/hoofei/clash/raw/main/icons/AI.png }
   - {name: Crypto, type: select, proxies: [日本], icon: https://gitee.com/hoofei/clash/raw/main/icons/Crypto.png }
   - {name: TikTok, type: select, proxies: [家宽], icon: https://gitee.com/hoofei/clash/raw/main/icons/TikTok.png }
   - {name: Netflix, type: select, proxies: [家宽], icon: https://gitee.com/hoofei/clash/raw/main/icons/Netflix.png }
