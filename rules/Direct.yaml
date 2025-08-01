@@ -4,5 +4,6 @@ payload:
   - IP-CIDR,8.211.162.0/24,no-resolve
   - IP-CIDR,46.232.61.0/24,no-resolve
   - IP-CIDR,112.124.21.0/24,no-resolve
+  - IP-CIDR,47.83.253.0/24,no-resolve
   - IP-CIDR,54.178.92.0/24,no-resolve
   - DOMAIN-SUFFIX,right.com.cn
