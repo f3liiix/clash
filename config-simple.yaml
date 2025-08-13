@@ -38,10 +38,10 @@ geo-auto-update: true # 是否自动更新 GEO
 geo-update-interval: 720 # 更新间隔，单位：小时
 # 自定义 GEO 下载地址
 geox-url:
-  geoip: "https://gitee.com/hoofei/clash/raw/main/data/geoip.dat"
-  geosite: "https://gitee.com/hoofei/clash/raw/main/data/geosite.dat"
-  mmdb: "https://gitee.com/hoofei/clash/raw/main/data/country.mmdb"
-  asn: "https://gitee.com/hoofei/clash/raw/main/data/GeoLite2-ASN.mmdb"
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 
 global-ua: clash.meta # 自定义外部资源下载时使用的的 UA
 
@@ -162,31 +162,22 @@ proxy-providers:
 proxy-groups:
   # 默认
   - {name: 默认, <<: *a2, icon: https://gitee.com/hoofei/clash/raw/main/icons/Manual.png }
-  # 分流
-  - {name: AI, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/AI.png }
-  - {name: TikTok, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/TikTok.png }
-  - {name: Netflix, type: select, proxies: [默认], icon: https://gitee.com/hoofei/clash/raw/main/icons/Netflix.png }
-
-rule-providers:
-  AI: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/AI.yaml, path: ./ruleset/AI.yaml}
-  TikTok: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/TikTok.yaml, path: ./ruleset/TikTok.yaml}
-  Netflix: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/Netflix.yaml, path: ./ruleset/Netflix.yaml}
-  WeChat: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/WeChat.yaml, path: ./ruleset/WeChat.yaml}
-  Steam: {<<: *a3, url: https://gitee.com/hoofei/clash/raw/main/rules/Steam.yaml, path: ./ruleset/Steam.yaml}
   
 rules:
 # 分流
-  - RULE-SET,AI,AI
-  - RULE-SET,TikTok,TikTok
-  - RULE-SET,Netflix,Netflix
-  - RULE-SET,WeChat,DIRECT
-  - RULE-SET,Steam,DIRECT
+  - GEOSITE,category-ai-!cn,默认
+  - GEOSITE,tiktok,默认
+  - GEOSITE,netflix,默认
+  - GEOSITE,disney,默认
+  - GEOSITE,telegram,默认
+  - GEOSITE,whatsapp,默认
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare.com,默认
   - DOMAIN-SUFFIX,dns.google,默认
   - DOMAIN,1.1.1.1,默认
+  - DOMAIN,1.0.0.1,默认
   - DOMAIN,8.8.8.8,默认
-  - DOMAIN,9.9.9.9,默认
+  - DOMAIN,8.8.4.4,默认
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,默认
