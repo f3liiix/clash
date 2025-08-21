@@ -170,11 +170,8 @@ proxy-groups:
   # - {name: 新加坡, <<: *a4, filter: "新加坡|SG|sg|新加坡|Singapore", icon: https://gitee.com/hoofei/clash/raw/main/icons/SG.png}
   - {name: 美国, <<: *a4, filter: "美国|美西|美东|洛杉矶|US|us|(?i)States|American", icon: https://gitee.com/hoofei/clash/raw/main/icons/US.png}
   - {name: 家宽, <<: *a2, filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub", icon: https://gitee.com/hoofei/clash/raw/main/icons/ISP.png}
-rule-providers:
-  Direct: {<<: *a6, url: https://gitee.com/hoofei/clash/raw/main/rules/direct.yaml, path: ./ruleset/direct.yaml}
   
 rules:
-  - RULE-SET,Direct,DIRECT
   - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,category-cryptocurrency,日本
   - GEOSITE,tiktok,家宽

@@ -6,26 +6,11 @@
 
 - 启用 TUN 模式，实现系统级透明代理
 - 完善的 DNS 配置，针对国内外网站分别使用不同 DNS 服务器
+- 完善的DNS防泄露
 - 智能分流规则，包含常用应用与服务（OpenAI、Claude、Grok、Binance等）
 - 节点自动测速与选择，提供最佳网络体验
 - 内置图标支持，美化 UI 界面
 - 域名嗅探功能，提高域名解析准确性
-
-## 配置说明
-
-### 代理分组
-
-| 分组名称 | 类型 | 说明 |
-|---------|------|------|
-| 默认 | 手动选择 | 默认使用的代理分组 |
-| OpenAI | 固定选择 | 用于 ChatGPT、DALL-E 等 OpenAI 服务 |
-| Claude | 固定选择 | 用于 Anthropic Claude AI 服务 |
-| Grok | 固定选择 | 用于 xAI Grok AI 服务 |
-| Binance | 固定选择 | 用于币安交易所 |
-| OKX | 固定选择 | 用于欧易交易所 |
-| 香港 | 自动测速 | 香港地区节点自动选择 |
-| 美国 | 自动测速 | 美国地区节点自动选择 |
-| 家宽 | 自动测速 | 家庭宽带节点自动选择 |
 
 ### 图标支持
 
@@ -33,14 +18,14 @@
 
 - **地区图标**：HK, US, JP, SG, TW 等国家/地区图标
 - **应用图标**：OpenAI, Claude, Grok, Binance, OKX, Netflix, TikTok 等
-- **服务图标**：Manual(手动选择), ISP(家宽) 等功能图标
+- **服务图标**：Manual(手动选择), Auto(自动选择), ISP(家宽) 等功能图标
 
-图标在配置文件中通过以下方式引用：
+图标在配置文件中通过以下方式引用（已自动同步Gitee进行国内加速）：
 
 ```yaml
 proxy-groups:
-  - {name: 默认, <<: *a2, icon: https://hoofei.com/clash/icons/Manual.png }
-  - {name: OpenAI, type: select, proxies: [家宽], icon: https://hoofei.com/clash/icons/OpenAI.png }
+  - {name: 默认, <<: *a2, icon: https://gitee.com/hoofei/clash/raw/main/icons/Manual.png }
+  - {name: OpenAI, type: select, proxies: [家宽], icon: https://gitee.com/hoofei/clash/raw/main/icons/OpenAI.png }
 ```
 
 ### 核心功能
@@ -82,4 +67,3 @@ proxy-providers:
 
 - 部分规则可能需要根据个人使用习惯调整
 - 如果自托管图标，请确保图标服务器可以正常访问
-- 国旗图标使用：https://nucleoapp.com/svg-flag-icons
