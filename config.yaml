@@ -192,5 +192,6 @@ rules:
   - DOMAIN,1.0.0.1,默认
   - DOMAIN,8.8.8.8,默认
   - DOMAIN,8.8.4.4,默认
+  - GEOSITE,CN,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,默认
