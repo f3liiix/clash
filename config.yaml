@@ -188,6 +188,7 @@ rules:
   - DOMAIN-SUFFIX,alidns.com,DIRECT
   - DOMAIN-SUFFIX,cloudflare.com,默认
   - DOMAIN-SUFFIX,dns.google,默认
+  - DOMAIN-SUFFIX,x-gpu.com,DIRECT
   - DOMAIN,1.1.1.1,默认
   - DOMAIN,1.0.0.1,默认
   - DOMAIN,8.8.8.8,默认
