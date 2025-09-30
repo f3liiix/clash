@@ -173,7 +173,7 @@ proxy-groups:
   
 rules:
   - GEOSITE,category-ai-!cn,家宽
-  - GEOSITE,category-cryptocurrency,日本
+  - GEOSITE,category-cryptocurrency,香港
   - GEOSITE,tiktok,家宽
   - GEOSITE,netflix,家宽
   - GEOSITE,disney,家宽
