@@ -149,9 +149,8 @@ sniffer:
     - "+.push.apple.com"
 
 # 策略组引用
-Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}, override: {skip-cert-verify: true, udp: true}}
+Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: "http://www.gstatic.com/generate_204", interval: 1800}, override: {skip-cert-verify: true, udp: true}}
 manual: &a2 {type: select, use: [Subscribe]}
-classical: &a3 {type: http, behavior: classical, interval: 28800}
 
 proxy-providers:
   Subscribe:
@@ -161,7 +160,7 @@ proxy-providers:
 
 proxy-groups:
   # 默认
-  - {name: 默认, <<: *a2, icon: https://gitee.com/hoofei/clash/raw/main/icons/Manual.png }
+  - {name: 默认, <<: *a2, icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png"}
   
 rules:
 # 分流
