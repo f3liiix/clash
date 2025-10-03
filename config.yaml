@@ -150,7 +150,6 @@ sniffer:
 
 # 策略组引用
 Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: "http://www.gstatic.com/generate_204", interval: 1800}, lazy: true, override: {skip-cert-verify: true, udp: true}}
-auto: &a4 {type: url-test, lazy: true, url: "http://www.gstatic.com/generate_204", interval: 300, use: [Subscribe]}
 manual: &a2 {type: select, use: [Subscribe]}
 
 proxy-providers:
@@ -163,16 +162,24 @@ proxy-groups:
   # 默认
   - {name: 默认, <<: *a2, icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png"}
   # 地区
-  - {name: 香港, <<: *a4, filter: "香港|HK|hk|(?i)Hong", icon: "https://gitee.com/hoofei/clash/raw/main/icons/HK.png"}
-  # - {name: 台湾, <<: *a4, filter: "台湾|TW|tw", icon: "https://gitee.com/hoofei/clash/raw/main/icons/TW.png"}
-  - {name: 日本, <<: *a4, filter: "日本|JP|jp|东京|大阪|Tokyo|Osaka", icon: "https://gitee.com/hoofei/clash/raw/main/icons/JP.png"}
-  # - {name: 新加坡, <<: *a4, filter: "新加坡|SG|sg|新加坡|Singapore", icon: "https://gitee.com/hoofei/clash/raw/main/icons/SG.png"}
-  - {name: 美国, <<: *a4, filter: "美国|美西|美东|洛杉矶|US|us|(?i)States|American", icon: "https://gitee.com/hoofei/clash/raw/main/icons/US.png"}
-  - {name: 家宽, <<: *a2, filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub", icon: "https://gitee.com/hoofei/clash/raw/main/icons/ISP.png"}
+  - {name: 香港, <<: *a2, filter: "香港|HK|hk|(?i)Hong", icon: "https://gitee.com/hoofei/clash/raw/main/icons/HK.png"}
+  # - {name: 台湾, <<: *a2, filter: "台湾|TW|tw", icon: "https://gitee.com/hoofei/clash/raw/main/icons/TW.png"}
+  - {name: 日本, <<: *a2, filter: "日本|JP|jp|东京|大阪|Tokyo|Osaka", icon: "https://gitee.com/hoofei/clash/raw/main/icons/JP.png"}
+  # - {name: 新加坡, <<: *a2, filter: "新加坡|SG|sg|新加坡|Singapore", icon: "https://gitee.com/hoofei/clash/raw/main/icons/SG.png"}
+  - {name: 美国, <<: *a2, filter: "美国|美西|美东|洛杉矶|US|us|(?i)States|American", icon: "https://gitee.com/hoofei/clash/raw/main/icons/US.png"}
+  - {name: 家宽, <<: *a2, filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub", icon: "https://gitee.com/hoofei/clash/raw/main/icons/ISP.png", proxies: [香港转日本]}
+  
+  # 链式代理
+  - name: 香港转日本
+    type: relay
+    proxies:
+      - 香港    # 第一级代理：香港节点
+      - 日本    # 第二级代理：日本节点
+    icon: "https://gitee.com/hoofei/clash/raw/main/icons/JP.png"
   
 rules:
   - GEOSITE,category-ai-!cn,家宽
-  - GEOSITE,category-cryptocurrency,香港
+  - GEOSITE,category-cryptocurrency,香港转日本
   - GEOSITE,tiktok,家宽
   - GEOSITE,netflix,家宽
   - GEOSITE,disney,家宽
