@@ -160,7 +160,7 @@ proxy-providers:
 
 proxy-groups:
   # 默认
-  - {name: 默认, <<: *a2, icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png"}
+  - {name: 默认, <<: *a2, icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png", proxies: [日本家宽]}
   # 地区
   - {name: 香港, <<: *a2, filter: "香港|HK|hk|(?i)Hong", icon: "https://gitee.com/hoofei/clash/raw/main/icons/HK.png"}
   # - {name: 台湾, <<: *a2, filter: "台湾|TW|tw", icon: "https://gitee.com/hoofei/clash/raw/main/icons/TW.png"}
