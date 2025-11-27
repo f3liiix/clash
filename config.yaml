@@ -1,7 +1,7 @@
 # 全局配置
 mixed-port: 7890 # HTTP(S) 和 SOCKS 代理混合端口
-redir-port: 7891 # 透明代理端口，用于 Linux 和 MacOS
-tproxy-port: 7892 # 透明代理端口，用于 Linux (TProxy TCP and TProxy UDP)
+# redir-port: 7891 # 透明代理端口，用于 Linux 和 MacOS
+# tproxy-port: 7892 # 透明代理端口，用于 Linux (TProxy TCP and TProxy UDP)
 # port: 7893 # HTTP(S) 代理服务器端口
 # socks-port: 7894 # SOCKS5 代理端口
 allow-lan: true # 允许局域网连接
@@ -32,7 +32,7 @@ tcp-concurrent: true # TCP 并发，TCP 并发请求所有 IP 地址，然后选
 global-client-fingerprint: chrome
 
 # GEOIP 数据模式
-geodata-mode: false # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false，true为dat，此项有默认值 false
+geodata-mode: true # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false，true为dat
 geodata-loader: memconservative # GEO 文件加载模式
 geo-auto-update: true # 是否自动更新 GEO
 geo-update-interval: 720 # 更新间隔，单位：小时
