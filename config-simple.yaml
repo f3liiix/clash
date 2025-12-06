@@ -5,7 +5,7 @@ mixed-port: 7890 # HTTP(S) 和 SOCKS 代理混合端口
 # port: 7893 # HTTP(S) 代理服务器端口
 # socks-port: 7894 # SOCKS5 代理端口
 allow-lan: true # 允许局域网连接
-bind-address: '*' # 绑定 IP 地址，仅作用于 allow-lan 为 true 时，'*'表示所有地址
+bind-address: "*" # 绑定 IP 地址，仅作用于 allow-lan 为 true 时，'*'表示所有地址
 skip-auth-prefixes: # 设置跳过验证的 IP 段
   - 127.0.0.1/8
   - ::1/128
@@ -71,14 +71,14 @@ dns:
 
   # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的 DNS 服务器域名
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-  
+    - 223.5.5.5
+    - 223.6.6.6
+
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - '*.arpa'
+    - "*.lan"
+    - "*.local"
+    - "*.arpa"
     - time.*.com
     - ntp.*.com
     - +.xiaomi.com
@@ -90,7 +90,7 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  
+
   # 配置 DNS 策略
   nameserver-policy:
     "geosite:cn,private,apple":
@@ -128,10 +128,12 @@ dns:
       - 224.0.0.0/4
       - 240.0.0.0/4
       - 255.255.255.255/32
-  
+
   proxy-server-nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
 
 # 嗅探配置
 sniffer:
@@ -149,8 +151,19 @@ sniffer:
     - "+.push.apple.com"
 
 # 策略组引用
-Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: "http://www.gstatic.com/generate_204", interval: 1800}, override: {skip-cert-verify: true, udp: true}}
-manual: &a2 {type: select, use: [Subscribe]}
+Pro:
+  &a1 {
+    type: http,
+    interval: 28800,
+    health-check:
+      {
+        enable: true,
+        url: "http://www.gstatic.com/generate_204",
+        interval: 1800,
+      },
+    override: { skip-cert-verify: true, udp: true },
+  }
+manual: &a2 { type: select, use: [Subscribe] }
 
 proxy-providers:
   Subscribe:
@@ -160,10 +173,14 @@ proxy-providers:
 
 proxy-groups:
   # 默认
-  - {name: 默认, <<: *a2, icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png"}
-  
+  - {
+      name: 默认,
+      <<: *a2,
+      icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png",
+    }
+
 rules:
-# 分流
+  # 分流
   - GEOSITE,category-ai-!cn,默认
   - GEOSITE,tiktok,默认
   - GEOSITE,netflix,默认
