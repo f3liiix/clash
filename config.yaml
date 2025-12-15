@@ -177,12 +177,12 @@ proxy-groups:
       filter: "日本|JP|jp|东京|大阪|Tokyo|Osaka",
       icon: "https://gitee.com/hoofei/clash/raw/main/icons/JP.png",
     }
-  - {
-      name: 新加坡,
-      <<: *a2,
-      filter: "新加坡|SG|sg|新加坡|Singapore",
-      icon: "https://gitee.com/hoofei/clash/raw/main/icons/SG.png",
-    }
+  # - {
+  #     name: 新加坡,
+  #     <<: *a2,
+  #     filter: "新加坡|SG|sg|新加坡|Singapore",
+  #     icon: "https://gitee.com/hoofei/clash/raw/main/icons/SG.png",
+  #   }
   - {
       name: 美国,
       <<: *a2,
