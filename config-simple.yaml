@@ -178,10 +178,17 @@ proxy-groups:
       <<: *a2,
       icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png",
     }
+  # 家宽
+  - {
+      name: 家宽,
+      <<: *a2,
+      filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub",
+      icon: "https://gitee.com/hoofei/clash/raw/main/icons/ISP.png",
+    }
 
 rules:
   # 分流
-  - GEOSITE,category-ai-!cn,默认
+  - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,tiktok,默认
   - GEOSITE,netflix,默认
   - GEOSITE,disney,默认
