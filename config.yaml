@@ -213,6 +213,8 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 分流规则
+  - DOMAIN-SUFFIX,google,美国
+  - GEOSITE,google,美国
   - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,category-cryptocurrency,日本
   - GEOSITE,tiktok,家宽
@@ -222,7 +224,6 @@ rules:
   - GEOSITE,telegram,美国
   - GEOSITE,whatsapp,美国
   - GEOSITE,paypal,美国
-  - GEOSITE,google,美国
   - GEOSITE,reddit,美国
   - GEOSITE,steam,DIRECT
   - GEOSITE,CN,DIRECT
