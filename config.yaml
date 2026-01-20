@@ -213,10 +213,9 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 分流规则
-  - DOMAIN-SUFFIX,google,美国
-  - GEOSITE,google,美国
   - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,category-cryptocurrency,日本
+  - GEOSITE,google,美国
   - GEOSITE,tiktok,家宽
   - GEOSITE,netflix,家宽
   - GEOSITE,disney,家宽
