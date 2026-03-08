@@ -119,6 +119,7 @@ dns:
     - ntp.*.com
     - geosite:private
     - geosite:cn
+    - "+.fun.ss"
 
 # 嗅探配置
 sniffer:
