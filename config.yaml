@@ -196,6 +196,12 @@ proxy-groups:
       filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub",
       icon: "https://gitee.com/hoofei/clash/raw/main/icons/ISP.png",
     }
+  - {
+      name: 公司,
+      <<: *a2,
+      filter: "公司|公司网络|公司内网|公司网络内网|公司网络外网|公司内网外网|公司网络内网外网",
+      icon: "https://gitee.com/hoofei/clash/raw/main/icons/CN.png",
+    }
 
 rules:
   # DNS 查询规则（优先级最高）
