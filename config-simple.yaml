@@ -176,23 +176,40 @@ proxy-groups:
   - {
       name: 默认,
       <<: *a2,
-      icon: "https://gitee.com/hoofei/clash/raw/main/icons/Manual.png",
+      icon: "https://img.hoofei.com/clash/icons/Manual.png",
     }
   # 家宽
   - {
       name: 家宽,
       <<: *a2,
       filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub",
-      icon: "https://gitee.com/hoofei/clash/raw/main/icons/ISP.png",
+      icon: "https://img.hoofei.com/clash/icons/ISP.png",
     }
 
 rules:
+  # DNS 查询规则（优先级最高）
+  - DOMAIN-SUFFIX,doh.pub,DIRECT
+  - DOMAIN-SUFFIX,alidns.com,DIRECT
+  - DOMAIN-SUFFIX,cloudflare.com,默认
+  - DOMAIN,dns.google,默认
+  - IP-CIDR,1.1.1.1/32,默认,no-resolve
+  - IP-CIDR,1.0.0.1/32,默认,no-resolve
+  - IP-CIDR,8.8.8.8/32,默认,no-resolve
+  - IP-CIDR,8.8.4.4/32,默认,no-resolve
+  - IP-CIDR,223.5.5.5/32,DIRECT,no-resolve
+  - IP-CIDR,223.6.6.6/32,DIRECT,no-resolve
+  - IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
+
+  # 私有网络
+  - GEOIP,PRIVATE,DIRECT,no-resolve
+
   # 分流
   - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,tiktok,默认
   - GEOSITE,netflix,默认
   - GEOSITE,disney,默认
   - GEOSITE,telegram,默认
+  - GEOIP,telegram,默认
   - GEOSITE,whatsapp,默认
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,alidns.com,DIRECT
