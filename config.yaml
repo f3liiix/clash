@@ -203,6 +203,24 @@ proxy-groups:
       icon: "https://img.hoofei.com/clash/icons/CN.png",
     }
 
+rule-providers:
+  custom-direct:
+    type: file
+    behavior: classical
+    path: ./rules/custom-direct.yaml
+  custom-us:
+    type: file
+    behavior: classical
+    path: ./rules/custom-us.yaml
+  custom-isp:
+    type: file
+    behavior: classical
+    path: ./rules/custom-isp.yaml
+  custom-proxy:
+    type: file
+    behavior: classical
+    path: ./rules/custom-proxy.yaml
+
 rules:
   # DNS 查询规则（优先级最高）
   - DOMAIN-SUFFIX,doh.pub,DIRECT
@@ -219,6 +237,12 @@ rules:
 
   # 私有网络
   - GEOIP,PRIVATE,DIRECT,no-resolve
+
+  # 自定义分流规则
+  - RULE-SET,custom-direct,DIRECT
+  - RULE-SET,custom-us,美国
+  - RULE-SET,custom-isp,家宽
+  - RULE-SET,custom-proxy,默认
 
   # 分流规则
   - DOMAIN-SUFFIX,google,美国
