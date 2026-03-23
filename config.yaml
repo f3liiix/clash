@@ -205,21 +205,29 @@ proxy-groups:
 
 rule-providers:
   custom-direct:
-    type: file
+    type: http
     behavior: classical
+    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-direct.yaml"
     path: ./rules/custom-direct.yaml
+    interval: 86400
   custom-us:
-    type: file
+    type: http
     behavior: classical
+    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-us.yaml"
     path: ./rules/custom-us.yaml
+    interval: 86400
   custom-isp:
-    type: file
+    type: http
     behavior: classical
+    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-isp.yaml"
     path: ./rules/custom-isp.yaml
+    interval: 86400
   custom-proxy:
-    type: file
+    type: http
     behavior: classical
+    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-proxy.yaml"
     path: ./rules/custom-proxy.yaml
+    interval: 86400
 
 rules:
   # DNS 查询规则（优先级最高）
