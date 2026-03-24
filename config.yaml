@@ -156,13 +156,31 @@ Pro:
     lazy: true,
     override: { skip-cert-verify: true, udp: true },
   }
+Pro-CN:
+  &a1-cn {
+    type: http,
+    interval: 28800,
+    health-check:
+      {
+        enable: true,
+        url: "https://connect.rom.miui.com/generate_204",
+        interval: 1800,
+      },
+    lazy: true,
+    override: { skip-cert-verify: true, udp: true },
+  }
 manual: &a2 { type: select, use: [Subscribe] }
+manual-cn: &a2-cn { type: select, use: [Subscribe-CN] }
 
 proxy-providers:
   Subscribe:
     <<: *a1
     url: $suburl
     path: ./SelfHost.yaml
+  Subscribe-CN:
+    <<: *a1-cn
+    url: $suburl
+    path: ./SelfHost-CN.yaml
 
 proxy-groups:
   # 默认
@@ -205,9 +223,8 @@ proxy-groups:
     }
   - {
       name: 公司,
-      <<: *a2,
+      <<: *a2-cn,
       filter: "公司|公司网络|公司内网|公司网络内网|公司网络外网|公司内网外网|公司网络内网外网",
-      url: "https://www.baidu.com/generate_204",
       icon: "https://img.hoofei.com/clash/icons/CN.png",
     }
 
