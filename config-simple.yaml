@@ -85,6 +85,14 @@ dns:
     - localhost.ptlogin2.qq.com
     - geosite:private
     - geosite:cn
+    - "+.qq.com"
+    - "+.wechat.com"
+    - "+.weixin.qq.com"
+    - "+.qpic.cn"
+    - "+.qlogo.cn"
+    - "+.servicewechat.com"
+    - "+.tenpay.com"
+    - "+.wxpay.wxutil.com"
 
   # 配置 DNS 服务器
   nameserver:
@@ -158,7 +166,7 @@ Pro:
     health-check:
       {
         enable: true,
-        url: "http://www.gstatic.com/generate_204",
+        url: "https://cp.cloudflare.com/generate_204",
         interval: 1800,
       },
     override: { skip-cert-verify: true, udp: true },
