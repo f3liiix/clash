@@ -150,7 +150,7 @@ Pro:
     health-check:
       {
         enable: true,
-        url: "https://cp.cloudflare.com/generate_204",
+        url: "https://www.google.com/generate_204",
         interval: 1800,
       },
     lazy: true,
