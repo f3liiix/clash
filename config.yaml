@@ -169,6 +169,7 @@ proxy-groups:
   - {
       name: 默认,
       <<: *a2,
+      exclude-filter: "公司|公司网络|公司内网",
       icon: "https://img.hoofei.com/clash/icons/Manual.png",
     }
   # 地区
