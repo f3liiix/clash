@@ -27,10 +27,6 @@ profile:
 unified-delay: true # 统一延迟，更换延迟计算方式，通过去除握手等额外开销来降低延迟数值
 tcp-concurrent: true # TCP 并发，TCP 并发请求所有 IP 地址，然后选择延迟最低的一个进行连接
 
-# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
-# 可选： "chrome","firefox","safari","ios","random","none" options.
-global-client-fingerprint: chrome
-
 # GEOIP 数据模式
 geodata-mode: true # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false，true为dat
 geodata-loader: memconservative # GEO 文件加载模式
