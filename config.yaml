@@ -116,6 +116,14 @@ dns:
     - geosite:private
     - geosite:cn
     - "+.fun.ss"
+    - "+.qq.com"
+    - "+.wechat.com"
+    - "+.weixin.qq.com"
+    - "+.qpic.cn"
+    - "+.qlogo.cn"
+    - "+.servicewechat.com"
+    - "+.tenpay.com"
+    - "+.wxpay.wxutil.com"
 
 # 嗅探配置
 sniffer:
@@ -130,6 +138,9 @@ sniffer:
       ports: [443, 8443]
   skip-domain:
     - "+.push.apple.com"
+    - "+.qq.com"
+    - "+.wechat.com"
+    - "+.qpic.cn"
 
 # 策略组引用
 Pro:
