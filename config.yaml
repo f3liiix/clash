@@ -124,6 +124,7 @@ dns:
     - "+.servicewechat.com"
     - "+.tenpay.com"
     - "+.wxpay.wxutil.com"
+    - "+.oss.hk"
 
 # 嗅探配置
 sniffer:
