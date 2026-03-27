@@ -58,7 +58,7 @@ tun:
 # DNS 配置
 dns:
   enable: true
-  prefer-h3: true # # 建议启用 HTTP/3，更快
+  prefer-h3: false # 建议启用 HTTP/3，更快
   listen: 0.0.0.0:53 # 开启 DNS 服务器监听
   ipv6: false
   respect-rules: true # 遵循规则
