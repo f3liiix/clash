@@ -209,7 +209,7 @@ proxy-groups:
       name: Claude,
       <<: *a2,
       filter: "Claude|claude",
-      icon: "https://img.hoofei.com/clash/icons/Manual.png",
+      icon: "https://img.hoofei.com/clash/icons/Claude.png",
     }
   - {
       name: 公司,
