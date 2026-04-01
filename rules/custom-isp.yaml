@@ -1,4 +1,0 @@
-payload:
-  # Claude 使用的服务
-  - DOMAIN-SUFFIX,intercom.io
-  - DOMAIN-SUFFIX,honeycomb.io

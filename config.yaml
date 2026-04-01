@@ -206,6 +206,12 @@ proxy-groups:
       icon: "https://img.hoofei.com/clash/icons/ISP.png",
     }
   - {
+      name: Claude,
+      <<: *a2,
+      filter: "Claude|claude",
+      icon: "https://img.hoofei.com/clash/icons/Manual.png",
+    }
+  - {
       name: 公司,
       type: url-test,
       use: [Subscribe],
@@ -228,11 +234,11 @@ rule-providers:
     url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-us.yaml"
     path: ./rules/custom-us.yaml
     interval: 86400
-  custom-isp:
+  custom-claude:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-isp.yaml"
-    path: ./rules/custom-isp.yaml
+    url: "https://raw.githubusercontent.com/f3liiix/clash/main/rules/custom-claude.yaml"
+    path: ./rules/custom-claude.yaml
     interval: 86400
   custom-proxy:
     type: http
@@ -259,9 +265,9 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 自定义分流规则
+  - RULE-SET,custom-claude,Claude
   - RULE-SET,custom-direct,DIRECT
   - RULE-SET,custom-us,美国
-  - RULE-SET,custom-isp,家宽
   - RULE-SET,custom-proxy,默认
 
   # 分流规则
