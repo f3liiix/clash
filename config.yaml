@@ -187,12 +187,12 @@ proxy-groups:
       filter: "日本|JP|jp|东京|大阪|Tokyo|Osaka",
       icon: "https://img.hoofei.com/clash/icons/JP.png",
     }
-  # - {
-  #     name: 新加坡,
-  #     <<: *a2,
-  #     filter: "新加坡|SG|sg|新加坡|Singapore",
-  #     icon: "https://img.hoofei.com/clash/icons/SG.png",
-  #   }
+  - {
+      name: 新加坡,
+      <<: *a2,
+      filter: "新加坡|SG|sg|新加坡|Singapore",
+      icon: "https://img.hoofei.com/clash/icons/SG.png",
+    }
   - {
       name: 美国,
       <<: *a2,
@@ -208,7 +208,7 @@ proxy-groups:
   - {
       name: Claude,
       <<: *a2,
-      filter: "Claude|claude",
+      filter: "家宽|住宅|(?i)ISP|isp|AT&T|Verizon|Spectrum|CenturyLink|Comcast|Xfinity|Sprint|T-Mobile|HKT|HGC|HKBN|CMHK|Hinet|Softbank|KDDI|Singtel|M1|Starhub",
       icon: "https://img.hoofei.com/clash/icons/Claude.png",
     }
   - {
@@ -265,7 +265,7 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 自定义分流规则
-  - RULE-SET,custom-claude,家宽
+  - RULE-SET,custom-claude,Claude
   - RULE-SET,custom-direct,DIRECT
   - RULE-SET,custom-us,美国
   - RULE-SET,custom-proxy,默认
