@@ -265,7 +265,7 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 自定义分流规则
-  - RULE-SET,custom-claude,Claude
+  - RULE-SET,custom-claude,家宽
   - RULE-SET,custom-direct,DIRECT
   - RULE-SET,custom-us,美国
   - RULE-SET,custom-proxy,默认
