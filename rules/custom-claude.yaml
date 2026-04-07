@@ -1,8 +1,18 @@
 payload:
   - DOMAIN,cdn.usefathom.com
   - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,clau.de
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,claude.app
+  - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
+  - DOMAIN-SUFFIX,cdn.anthropic.com
+  - DOMAIN-SUFFIX,anthropic.auth0.com
+  - DOMAIN-SUFFIX,anthropic-com.ghost.io
+  - DOMAIN-SUFFIX,anthropic.com.cdn.cloudflare.net
+  - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,datadoghq.com
   - DOMAIN-SUFFIX,intercom.io
   - DOMAIN-SUFFIX,honeycomb.io
