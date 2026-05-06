@@ -5,6 +5,8 @@ payload:
   - DOMAIN-SUFFIX,dingtalk.com
   - DOMAIN-SUFFIX,gov.cn
   - DOMAIN-SUFFIX,jianying.com
+  - DOMAIN-SUFFIX,kimi.com
+  - DOMAIN-SUFFIX,d.123.ss
   - DOMAIN-SUFFIX,hailuoai.com
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,baidu.com
