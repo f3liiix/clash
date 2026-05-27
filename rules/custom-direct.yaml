@@ -6,7 +6,6 @@ payload:
   - DOMAIN-SUFFIX,gov.cn
   - DOMAIN-SUFFIX,jianying.com
   - DOMAIN-SUFFIX,kimi.com
-  - DOMAIN-SUFFIX,d.123.ss
   - DOMAIN-SUFFIX,hailuoai.com
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,baidu.com
@@ -14,7 +13,6 @@ payload:
   - DOMAIN-SUFFIX,changdupingtai.com
   - DOMAIN-SUFFIX,gaga.art
   - DOMAIN-SUFFIX,n.cn
-  - DOMAIN-SUFFIX,tokensss.com
   - DOMAIN-SUFFIX,feizei.com
   - DOMAIN-SUFFIX,rfchost.com
   - DOMAIN-SUFFIX,szhdy.com
