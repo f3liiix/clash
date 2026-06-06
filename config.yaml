@@ -265,6 +265,7 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
 
   # 自定义分流规则
+  - DOMAIN-SUFFIX,chuchu.com,公司
   - RULE-SET,custom-claude,Claude
   - RULE-SET,custom-direct,DIRECT
   - RULE-SET,custom-us,美国
@@ -274,7 +275,7 @@ rules:
   - DOMAIN-SUFFIX,google,美国
   - GEOSITE,google,美国
   - GEOSITE,category-ai-!cn,家宽
-  - GEOSITE,category-cryptocurrency,美国
+  - GEOSITE,category-cryptocurrency,日本
   - GEOSITE,tiktok,家宽
   - GEOSITE,netflix,家宽
   - GEOIP,netflix,家宽
