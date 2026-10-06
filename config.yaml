@@ -124,12 +124,13 @@ dns:
     - "+.servicewechat.com"
     - "+.tenpay.com"
     - "+.wxpay.wxutil.com"
-    - "+.oss.hk"
+    - "+.openrouter.ai"
     - "sg.123.ss"
     - "+.bytepluses.com"
     - "+.byteplusapi.com"
     - "+.max20.ai"
     - "+.xiaoyueyue.com"
+    - "+.2006608.xyz"
 
 # 嗅探配置
 sniffer:
