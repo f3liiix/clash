@@ -286,9 +286,6 @@ rules:
   # 自定义分流规则
   - DOMAIN-SUFFIX,bytepluses.com,DIRECT
   - DOMAIN-SUFFIX,byteplusapi.com,DIRECT
-  - DOMAIN,sg.123.ss,新加坡
-  - DOMAIN-SUFFIX,xiaoyueyue.com,新加坡
-  - GEOSITE,youtube,香港
   - RULE-SET,custom-anthropic,Claude
   - RULE-SET,custom-openai,美国
   - RULE-SET,custom-google,美国
