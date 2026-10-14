@@ -130,7 +130,8 @@ dns:
     - "+.byteplusapi.com"
     - "+.max20.ai"
     - "+.xiaoyueyue.com"
-    - "+.2006608.xyz"
+    - "+.factory.ai"
+    - "+.factory.com"
 
 # 嗅探配置
 sniffer:
@@ -297,7 +298,7 @@ rules:
 
   # 分流规则
   - GEOSITE,google,美国
-  - GEOSITE,category-ai-!cn,家宽 # 其余 AI 服务兜底
+  - GEOSITE,category-ai-!cn,家宽
   - GEOSITE,category-cryptocurrency,日本
   - GEOSITE,tiktok,家宽
   - GEOSITE,netflix,家宽
