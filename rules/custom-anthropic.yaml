@@ -10,3 +10,6 @@ payload:
   - DOMAIN-SUFFIX,anthropic-com.ghost.io
   - DOMAIN-SUFFIX,anthropic.com.cdn.cloudflare.net
   - DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
+  - DOMAIN-SUFFIX,datadoghq.com
+  - DOMAIN-KEYWORD,anthropic
+  - DOMAIN-KEYWORD,claude
