@@ -2,8 +2,9 @@ payload:
   - DOMAIN-SUFFIX,fun.ss
   - DOMAIN-SUFFIX,ultramobile.com
   - DOMAIN-SUFFIX,muse.ai
-  - IP-CIDR,157.254.234.71/32,no-resolve
-  - IP-CIDR,162.225.105.247/32,no-resolve
+  - DOMAIN-SUFFIX,tokensss.com
+  - IP-CIDR,104.250.133.0/24,no-resolve
+  - IP-CIDR,68.255.152.10/32,no-resolve
   - IP-CIDR,74.125.0.0/16,no-resolve
   - IP-CIDR,142.250.0.0/15,no-resolve
   - IP-CIDR,172.217.0.0/16,no-resolve
