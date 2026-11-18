@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,huaweicloud.com
   - DOMAIN-SUFFIX,changdupingtai.com
   - DOMAIN-SUFFIX,feizei.com
+  - DOMAIN-SUFFIX,9210.net
   - DOMAIN,api.123.ss
   - DOMAIN,d.123.ss
   - DOMAIN,vm.hide.ss
