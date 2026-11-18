@@ -16,7 +16,7 @@ payload:
   - DOMAIN,vm.hide.ss
   - DOMAIN,example.com
   - IP-CIDR,191.222.216.171/32,no-resolve
-  - IP-CIDR,207.57.140.42/32,no-resolve
+  - IP-CIDR,38.55.111.80/32,no-resolve
   - IP-CIDR,154.21.90.212/32,no-resolve
   - IP-CIDR,45.153.247.0/24,no-resolve
   - IP-CIDR,216.23.81.171/32,no-resolve
