@@ -132,6 +132,7 @@ dns:
     - "+.xiaoyueyue.com"
     - "+.factory.ai"
     - "+.factory.com"
+    - "+.9210.net"
 
 # 嗅探配置
 sniffer:
