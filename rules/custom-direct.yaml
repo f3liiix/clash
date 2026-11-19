@@ -5,6 +5,7 @@ payload:
   - DOMAIN-SUFFIX,gov.cn
   - DOMAIN-SUFFIX,jianying.com
   - DOMAIN-SUFFIX,kimi.com
+  - DOMAIN-SUFFIX,z.ai
   - DOMAIN-SUFFIX,hailuoai.com
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,baidu.com
